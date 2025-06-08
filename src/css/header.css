@@ -1,0 +1,33 @@
+.header {
+  position: relative;
+  height: 300px;
+  background-image: url('/icons/lobo.svg'); /* asegúrate que la ruta es correcta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+  z-index: 0;
+}
+
+/* Asegúrate que el texto esté encima de la capa */
+.header h1,
+.header h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0.3em 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}

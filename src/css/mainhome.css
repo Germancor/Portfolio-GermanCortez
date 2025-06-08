@@ -1,0 +1,83 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(135deg, #61dafb 0%, #282c34 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+h2 {
+  color: #61dafb;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.triangle-container {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: 50px auto;
+  animation: rotate 20s linear infinite;
+}
+
+
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+.logo.main {
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  animation: logo-spin 10s linear infinite;
+}
+
+
+.logo.secondary {
+  animation: counter-rotate 20s linear infinite;
+}
+
+
+.logo.secondary.shadow {
+  top: 5%;
+  left: 5%;
+  filter: drop-shadow(3px 3px 6px rgb(37, 95, 255));
+  z-index: 1;
+}
+
+.logo.secondary.glow {
+  top: 10%;
+  right: 10%;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+  z-index: 1;
+}
+
+
+.logo.secondary:hover {
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1));
+  transform: scale(1.1);
+}
+
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes counter-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}

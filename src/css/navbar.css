@@ -1,0 +1,11 @@
+.custom-navbar {
+  border-bottom: 2px solid #333;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.custom-navbar .nav-link {
+  margin-right: 15px;  
+}
+.custom-navbar .nav-link:hover {
+  border-bottom: 2px solid #007bff; 
+  transition: border-bottom 0.3s ease; 
+}
